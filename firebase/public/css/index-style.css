@@ -1,0 +1,92 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-size: cover; /* Ajusta para cobrir toda a tela */
+    background-attachment: fixed; /* Mantém a imagem fixa ao rolar a página */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+}
+
+.main {
+    display: flex;
+    flex-direction: column; /* Alinha os filhos em coluna */
+    align-items: center; /* Centraliza os filhos horizontalmente */
+    width: 80%; /* Define a largura da main em 80% */
+    max-width: 800px; /* Define uma largura máxima */
+    margin: auto; /* Centraliza a main na tela */
+}
+
+.filho {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    width: 100%; /* Faz com que o filho ocupe 100% da largura disponível */
+    display: flex;
+    flex-direction: column; /* Alinha o conteúdo do filho em coluna */
+    align-items: center; /* Centraliza o conteúdo dentro do filho */
+    text-align: center; /* Centraliza o texto */
+}
+
+p {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    padding: 1rem;
+    width: 90%; /* Altera a largura para 90% */
+    max-width: 600px; /* Define uma largura máxima para o parágrafo */
+}
+
+nav {
+    margin-top: 1rem;
+}
+
+nav h1 {
+    text-align: center;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    margin: 0;
+    border-radius: 10px;
+}
+
+img {
+    width: 100%; /* Faz a imagem ocupar 100% do contêiner */
+    max-width: 300px; /* Define uma largura máxima para a imagem */
+}
+
+video {
+    width: 100%; /* Faz o vídeo ocupar 100% do contêiner */
+    max-width: 300px; /* Define uma largura máxima para o vídeo */
+}
+
+/* Media Queries para ajuste em telas menores */
+@media (max-width: 768px) {
+    .main {
+        width: 95%; /* Aumenta a largura em telas menores */
+    }
+    
+    nav h1 {
+        font-size: 1.5rem; /* Diminui o tamanho da fonte do título em telas menores */
+    }
+
+    p {
+        width: 95%; /* Mantém a largura do parágrafo em 95% em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    nav h1 {
+        font-size: 1.2rem; /* Diminui ainda mais o tamanho da fonte do título em telas muito pequenas */
+    }
+
+    img,
+    video {
+        max-width: 90%; /* Ajusta a largura máxima para 90% em telas muito pequenas */
+    }
+}
